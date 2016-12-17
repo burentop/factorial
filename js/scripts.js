@@ -1,9 +1,12 @@
 var factorialize = function(number) {
-  var sum = 1;
-  for (var index = number; index > 0; index -= 1) {
-    sum *= index;
+  if (number <= 1) {
+    return 1;
+  } else {
+    var sum = number * factorialize(number - 1);
+    //for (var index = number; index > 0; index -= 1) {
+    //  sum *= index;
   }
-  return sum;
+    return sum;
 }
 
 $(document).ready(function() {
